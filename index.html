@@ -11,14 +11,17 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --rojo: #D31224;
+      --rojo-vivo: #E0152A;
+      --rojo-oscuro: #A00D1C;
+      --rojo-profundo: #7A0915;
+      --rojo-suave: #B01A2A;
+      --rojo-tenue: rgba(211, 18, 36, 0.15);
+      --rojo-borde: rgba(211, 18, 36, 0.35);
       --negro: #0A0A0A;
       --negro-suave: #141414;
       --tarjeta: #1A1A1A;
       --tarjeta-hover: #222222;
       --borde: #2A2A2A;
-      --borde-hover: #D4AF37;
-      --dorado: #D4AF37;
-      --dorado-tenue: rgba(212, 175, 55, 0.15);
       --texto: #F5F5F5;
       --texto-tenue: #A0A0A0;
       --texto-suave: #6B6B6B;
@@ -51,7 +54,7 @@
       transform: translateX(-50%);
       width: 80px;
       height: 2px;
-      background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+      background: linear-gradient(90deg, transparent, var(--rojo), transparent);
     }
     .logo { max-width: 130px; height: auto; margin-bottom: 1rem; }
     .titulo-wrapper { position: relative; display: flex; justify-content: center; margin: 0 auto; padding: 0 32px; }
@@ -86,7 +89,7 @@
     .btn-abrir-asistente:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 28px rgba(211, 18, 36, 0.35);
-      background: #E0152A;
+      background: var(--rojo-vivo);
     }
     .btn-abrir-asistente:active { transform: scale(0.98); }
 
@@ -103,8 +106,8 @@
       transition: all 0.3s ease; position: relative; overflow: hidden;
     }
     .pregunta-item:hover {
-      border-color: var(--borde-hover); background: var(--tarjeta-hover);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 0 1px var(--dorado-tenue);
+      border-color: var(--rojo-borde); background: var(--tarjeta-hover);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 0 1px var(--rojo-tenue);
     }
     .pregunta-boton {
       background: none; border: none; width: 100%; text-align: left;
@@ -117,7 +120,7 @@
       line-height: 1.45; letter-spacing: -0.1px;
     }
     .pregunta-meta { font-size: 0.7rem; color: var(--texto-suave); margin: 10px 0 8px 28px; letter-spacing: 0.2px; }
-    .pregunta-meta .sector { color: var(--dorado); font-weight: 500; opacity: 0.9; }
+    .pregunta-meta .sector { color: var(--rojo-vivo); font-weight: 500; opacity: 0.95; }
     .btn-ver-respuesta {
       background: transparent; border: 1px solid var(--rojo); color: var(--rojo);
       font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.75rem;
@@ -131,10 +134,10 @@
     }
     .respuesta-container.visible { max-height: 400px; opacity: 1; overflow-y: auto; margin-top: 14px; }
     .respuesta-container.visible::-webkit-scrollbar { width: 4px; }
-    .respuesta-container.visible::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+    .respuesta-container.visible::-webkit-scrollbar-thumb { background: var(--rojo-oscuro); border-radius: 10px; }
     .respuesta {
       background: var(--negro-suave); padding: 1.2rem 1.2rem 1rem;
-      border-radius: 12px; border-left: 3px solid var(--dorado); position: relative;
+      border-radius: 12px; border-left: 3px solid var(--rojo); position: relative;
     }
     .cerrar-respuesta {
       position: sticky; top: 0; float: right; background: var(--tarjeta); border: 1px solid var(--borde);
@@ -144,41 +147,132 @@
     }
     .cerrar-respuesta:hover { background: var(--rojo); color: white; border-color: var(--rojo); }
     .respuesta-texto { clear: both; font-size: 0.9rem; line-height: 1.6; color: var(--texto); }
-    .respuesta-autor { font-size: 0.75rem; font-weight: 600; margin-top: 12px; color: var(--dorado); text-align: right; letter-spacing: 0.3px; }
+    .respuesta-autor { font-size: 0.75rem; font-weight: 600; margin-top: 12px; color: var(--rojo-vivo); text-align: right; letter-spacing: 0.3px; }
     .loading { text-align: center; padding: 40px; color: var(--texto-suave); font-size: 0.9rem; }
 
-    .footnote { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--borde); text-align: center; }
-    .footnote h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--texto); margin-bottom: 0.5rem; letter-spacing: 0.3px; }
-    .footnote p { font-size: 0.85rem; color: var(--texto-tenue); margin-bottom: 1.5rem; }
-    .contactos { display: flex; flex-direction: column; gap: 2rem; text-align: left; }
-    .sector-bloque { text-align: left; }
-    .sector-titulo {
-      font-family: 'Playfair Display', serif; font-weight: 700; color: var(--dorado);
-      margin-bottom: 0.8rem; letter-spacing: 0.5px; text-transform: uppercase;
-      font-size: 0.8rem; opacity: 0.9;
+    /* ---------- FOOTNOTE (contactos) ---------- */
+    .footnote {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--borde);
+      text-align: center;
     }
-    .puesto-grupo { margin-bottom: 1rem; }
+    .footnote h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--texto);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.3px;
+    }
+    .footnote p {
+      font-size: 0.85rem;
+      color: var(--texto-tenue);
+      margin-bottom: 1.5rem;
+    }
+    .footnote-icons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 1rem;
+    }
+    .icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--tarjeta);
+      border: 1px solid var(--borde);
+      cursor: pointer;
+      transition: all 0.25s;
+      text-decoration: none;
+    }
+    .icon-btn:hover { transform: translateY(-3px); }
+    .icon-btn.whatsapp:hover { border-color: #25D366; background: rgba(37, 211, 102, 0.08); }
+    .icon-btn.instagram:hover { border-color: #E1306C; background: rgba(225, 48, 108, 0.08); }
+    .icon-btn img { width: 26px; height: 26px; }
+
+    /* Panel de sectores (oculto por defecto) */
+    .sectores-panel {
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 1rem;
+      text-align: left;
+      animation: fadeIn 0.3s ease;
+    }
+    .sectores-panel.visible { display: flex; }
+    .sector-btn {
+      background: var(--tarjeta);
+      border: 1px solid var(--borde);
+      color: var(--texto);
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      transition: all 0.2s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sector-btn:hover {
+      border-color: var(--rojo);
+      background: rgba(211, 18, 36, 0.06);
+    }
+    .sector-btn .arrow {
+      color: var(--rojo-vivo);
+      font-size: 1.1rem;
+      transition: transform 0.2s;
+    }
+    .sector-btn.abierto .arrow { transform: rotate(90deg); }
+
+    /* Detalle de contactos de un sector */
+    .sector-detalle {
+      display: none;
+      padding: 12px 16px;
+      background: var(--negro-suave);
+      border-radius: 12px;
+      border: 1px solid var(--borde);
+      margin-top: -4px;
+      animation: fadeIn 0.3s ease;
+    }
+    .sector-detalle.visible { display: block; }
+    .puesto-grupo { margin-bottom: 12px; }
+    .puesto-grupo:last-child { margin-bottom: 0; }
     .puesto-subtitulo {
-      font-size: 0.7rem; font-weight: 600; color: var(--texto-suave);
-      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--texto-suave);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
     }
     .contacto-botones { display: flex; flex-wrap: wrap; gap: 8px; }
     .btn-contacto {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--tarjeta); border: 1px solid var(--borde); color: var(--texto);
-      text-decoration: none; padding: 8px 14px; border-radius: 30px;
-      font-size: 0.8rem; font-weight: 500; transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--tarjeta);
+      border: 1px solid var(--borde);
+      color: var(--texto);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: all 0.2s;
     }
-    .btn-contacto:hover { border-color: #25D366; background: rgba(37, 211, 102, 0.08); }
+    .btn-contacto:hover {
+      border-color: #25D366;
+      background: rgba(37, 211, 102, 0.08);
+    }
     .btn-contacto img { width: 16px; height: 16px; }
-    .instagram-inline {
-      display: inline-flex; align-items: center; gap: 6px;
-      color: var(--texto-tenue); text-decoration: none; font-size: 0.8rem;
-      transition: color 0.2s; margin-top: 1rem;
-    }
-    .instagram-inline:hover { color: #E1306C; }
-    .instagram-inline img { width: 18px; height: 18px; opacity: 0.7; }
-    .instagram-inline:hover img { opacity: 1; }
 
     .footer {
       max-width: 720px; margin: 3rem auto 0; padding: 1.5rem 1.2rem 1rem;
@@ -229,7 +323,7 @@
     }
     .boton-opcion:hover { border-color: var(--rojo); background: rgba(211, 18, 36, 0.06); }
     .boton-opcion.principal { background: var(--rojo); color: white; border-color: var(--rojo); }
-    .boton-opcion.principal:hover { background: #E0152A; }
+    .boton-opcion.principal:hover { background: var(--rojo-vivo); }
     .boton-opcion.volver {
       background: transparent; border: 1px solid var(--borde); color: var(--texto-tenue);
       font-size: 0.8rem; padding: 8px 12px; width: auto; align-self: flex-start;
@@ -241,7 +335,7 @@
       font-size: 0.9rem; width: 100%; margin-top: 0.5rem;
       cursor: pointer; transition: all 0.2s; letter-spacing: 0.2px;
     }
-    .btn-siguiente:hover { background: #E0152A; transform: translateY(-1px); }
+    .btn-siguiente:hover { background: var(--rojo-vivo); transform: translateY(-1px); }
     .error-text { color: var(--rojo); font-size: 0.75rem; margin-top: -10px; margin-bottom: 10px; }
     .nav-paso { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; gap: 12px; }
     .nav-paso .btn-siguiente { flex: 1; margin-top: 0; }
@@ -281,16 +375,23 @@
       <div id="muroLista"><div class="loading">Cargando preguntas...</div></div>
     </div>
 
+    <!-- FOOTNOTE: contactos -->
     <div class="footnote">
       <h3>¿Preferís comunicarte directamente con nosotros?</h3>
-      <p>Elegí a quién querés escribirle y te atendemos por WhatsApp.</p>
-      <div id="contactosContainer" class="contactos">
-        <div class="loading">Cargando contactos...</div>
+      <p>Elegí cómo querés contactarnos.</p>
+      <div class="footnote-icons">
+        <button class="icon-btn whatsapp" id="btnWhatsapp" title="WhatsApp">
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+        </button>
+        <a href="https://www.instagram.com/fiunaparatodos" class="icon-btn instagram" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+        </a>
       </div>
-      <a href="https://www.instagram.com/fiunaparatodos" class="instagram-inline" target="_blank" rel="noopener noreferrer">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
-        Seguinos en Instagram
-      </a>
+
+      <!-- Panel de sectores (oculto inicialmente) -->
+      <div class="sectores-panel" id="sectoresPanel">
+        <!-- Se llena dinámicamente -->
+      </div>
     </div>
   </div>
 
@@ -391,8 +492,7 @@
     <!-- SCRIPT -->
   <script>
     // ========== CONFIGURACIÓN ==========
-    // 👇 ACÁ VA EL LINK DEL SCRIPT
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby6Q0wzLxrApMkfg1UAmC48cpS3sbW9rDTrpKxrDu-X-qOTwUqKWenLOLorl9e--228/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzIuYDBkJIMEKJRstaeeDTtb8iQpxgcl1HmtoBISAwPkxnwyAr_LPPETGaxbi6de5iU/exec";
 
     let telefonosGlobal = [];
     let candidatosGlobal = {};
@@ -488,15 +588,12 @@
     }
     function cerrarRespuesta(idx) { toggleRespuesta(idx, true); }
 
-    // ========== CONTACTOS (footnote) ==========
-    function renderContactos() {
-      const container = document.getElementById('contactosContainer');
-      if (!container) return;
-      if (!telefonosGlobal.length) {
-        container.innerHTML = '<p style="color:var(--texto-suave);">No hay contactos disponibles.</p>';
-        return;
-      }
+    // ========== CONTACTOS (footnote con panel desplegable) ==========
+    function renderSectores() {
+      const panel = document.getElementById('sectoresPanel');
+      if (!panel) return;
 
+      // Orden esperado de la hoja "Telefonos"
       const orden = [
         { sector: "Asamblea Universitaria", puesto: "Titular" },
         { sector: "Asamblea Universitaria", puesto: "Suplente" },
@@ -512,6 +609,7 @@
         { sector: "Tribunal Electoral Independiente", puesto: "Suplente" }
       ];
 
+      // Agrupar contactos por sector -> puesto -> [contactos]
       const agrupado = {};
       telefonosGlobal.forEach((t, i) => {
         const ref = orden[i] || { sector: "Otros", puesto: "" };
@@ -520,12 +618,23 @@
         agrupado[ref.sector][ref.puesto].push(t);
       });
 
+      // Renderizar botones de sectores
       let html = '';
-      Object.keys(agrupado).forEach(sector => {
-        html += `<div class="sector-bloque"><div class="sector-titulo">${escapeHtml(sector)}</div>`;
+      Object.keys(agrupado).forEach((sector, index) => {
+        const sectorId = `sector-${index}`;
+        html += `
+          <button class="sector-btn" data-sector="${escapeHtml(sector)}" data-target="${sectorId}">
+            ${escapeHtml(sector)}
+            <span class="arrow">›</span>
+          </button>
+          <div class="sector-detalle" id="${sectorId}">
+        `;
         Object.keys(agrupado[sector]).forEach(puesto => {
-          if (puesto) html += `<div class="puesto-grupo"><div class="puesto-subtitulo">${escapeHtml(puesto)}</div>`;
-          html += `<div class="contacto-botones">`;
+          if (puesto) {
+            html += `<div class="puesto-grupo"><div class="puesto-subtitulo">${escapeHtml(puesto)}</div><div class="contacto-botones">`;
+          } else {
+            html += `<div class="puesto-grupo"><div class="contacto-botones">`;
+          }
           agrupado[sector][puesto].forEach(t => {
             const url = `https://wa.me/${t.numero}?text=${encodeURIComponent(t.mensaje || '')}`;
             html += `
@@ -535,13 +644,42 @@
               </a>
             `;
           });
-          html += `</div>`;
-          if (puesto) html += `</div>`;
+          html += `</div></div>`;
         });
         html += `</div>`;
       });
-      container.innerHTML = html;
+      panel.innerHTML = html;
+
+      // Asignar eventos a los botones de sectores
+      panel.querySelectorAll('.sector-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const detalle = document.getElementById(targetId);
+          const isVisible = detalle.classList.contains('visible');
+
+          // Cerrar todos los detalles
+          panel.querySelectorAll('.sector-detalle').forEach(d => d.classList.remove('visible'));
+          panel.querySelectorAll('.sector-btn').forEach(b => b.classList.remove('abierto'));
+
+          // Si no estaba visible, abrirlo
+          if (!isVisible) {
+            detalle.classList.add('visible');
+            btn.classList.add('abierto');
+          }
+        });
+      });
     }
+
+    // Mostrar/ocultar el panel de sectores al tocar WhatsApp
+    document.addEventListener('DOMContentLoaded', () => {
+      const btnWa = document.getElementById('btnWhatsapp');
+      const panel = document.getElementById('sectoresPanel');
+      if (btnWa && panel) {
+        btnWa.addEventListener('click', () => {
+          panel.classList.toggle('visible');
+        });
+      }
+    });
 
     // ========== ASISTENTE ==========
     const modal = document.getElementById('asistenteModal');
@@ -702,7 +840,7 @@
     // Inicializar
     (async () => {
       await cargarMuro();
-      renderContactos();
+      renderSectores();
     })();
   </script>
 </body>
