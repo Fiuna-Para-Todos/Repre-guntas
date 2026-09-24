@@ -11,7 +11,6 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --rojo: #D31224;
-      --rojo-oscuro: #A00D1C;
       --negro: #0A0A0A;
       --negro-suave: #141414;
       --tarjeta: #1A1A1A;
@@ -37,7 +36,6 @@
     }
     input, textarea, select { user-select: text; }
 
-    /* ---------- HEADER ---------- */
     .header {
       background: linear-gradient(180deg, #141414 0%, #0A0A0A 100%);
       padding: 2rem 1.5rem 1.5rem;
@@ -55,83 +53,35 @@
       height: 2px;
       background: linear-gradient(90deg, transparent, var(--dorado), transparent);
     }
-    .logo {
-      max-width: 130px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-    .titulo-wrapper {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
+    .logo { max-width: 130px; height: auto; margin-bottom: 1rem; }
+    .titulo-wrapper { position: relative; display: flex; justify-content: center; margin: 0 auto; padding: 0 32px; }
     .titulo-principal { text-align: center; }
     .linea-repre {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      font-weight: 900;
-      color: var(--rojo);
-      text-transform: uppercase;
-      letter-spacing: -0.5px;
-      line-height: 1.1;
+      font-size: 3rem; font-weight: 900; color: var(--rojo);
+      text-transform: uppercase; letter-spacing: -0.5px; line-height: 1.1;
     }
     .linea-te-escucha {
       font-family: 'Playfair Display', serif;
-      font-size: 1.9rem;
-      font-weight: 700;
-      color: var(--texto);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      line-height: 1.2;
+      font-size: 1.9rem; font-weight: 700; color: var(--texto);
+      text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.2;
     }
     .emoji-lateral {
-      position: absolute;
-      right: 13px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      color: initial;
-      pointer-events: none;
-      white-space: nowrap;
-      opacity: 0.9;
+      position: absolute; right: 13px; top: 50%; transform: translateY(-50%);
+      font-size: 2rem; color: initial; pointer-events: none; white-space: nowrap; opacity: 0.9;
     }
-    .slogan {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--texto-tenue);
-      margin-top: 10px;
-      letter-spacing: 0.5px;
-    }
+    .slogan { font-size: 0.85rem; font-weight: 500; color: var(--texto-tenue); margin-top: 10px; letter-spacing: 0.5px; }
 
-    /* ---------- CONTAINER ---------- */
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 2rem 1.2rem;
-    }
+    .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.2rem; }
 
-    /* ---------- BOTÓN PRINCIPAL ---------- */
     .btn-abrir-asistente {
-      background: var(--rojo);
-      color: white;
-      border: none;
-      padding: 16px 20px;
-      border-radius: 14px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      width: 100%;
-      transition: all 0.25s ease;
+      background: var(--rojo); color: white; border: none;
+      padding: 16px 20px; border-radius: 14px;
+      font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1rem;
+      cursor: pointer; width: 100%; transition: all 0.25s ease;
       box-shadow: 0 6px 20px rgba(211, 18, 36, 0.25);
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      letter-spacing: 0.3px;
+      margin-bottom: 2rem; display: flex; align-items: center; justify-content: center;
+      gap: 10px; letter-spacing: 0.3px;
     }
     .btn-abrir-asistente:hover {
       transform: translateY(-2px);
@@ -140,461 +90,162 @@
     }
     .btn-abrir-asistente:active { transform: scale(0.98); }
 
-    /* ---------- MURO ---------- */
     .muro h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: var(--texto);
-      letter-spacing: 0.3px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700;
+      margin-bottom: 1.5rem; color: var(--texto); letter-spacing: 0.3px;
+      display: flex; align-items: center; gap: 10px;
     }
-    .muro h2::before {
-      content: '';
-      width: 4px;
-      height: 22px;
-      background: var(--rojo);
-      border-radius: 2px;
-    }
+    .muro h2::before { content: ''; width: 4px; height: 22px; background: var(--rojo); border-radius: 2px; }
 
     .pregunta-item {
-      background: var(--tarjeta);
-      border-radius: 16px;
-      margin-bottom: 16px;
-      padding: 1.4rem 1.4rem 1.2rem;
-      border: 1px solid var(--borde);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+      background: var(--tarjeta); border-radius: 16px; margin-bottom: 16px;
+      padding: 1.4rem 1.4rem 1.2rem; border: 1px solid var(--borde);
+      transition: all 0.3s ease; position: relative; overflow: hidden;
     }
     .pregunta-item:hover {
-      border-color: var(--borde-hover);
-      background: var(--tarjeta-hover);
+      border-color: var(--borde-hover); background: var(--tarjeta-hover);
       box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 0 1px var(--dorado-tenue);
     }
-
     .pregunta-boton {
-      background: none;
-      border: none;
-      width: 100%;
-      text-align: left;
-      cursor: pointer;
-      padding: 0;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-family: inherit;
-      color: inherit;
+      background: none; border: none; width: 100%; text-align: left;
+      cursor: pointer; padding: 0; display: flex; align-items: flex-start;
+      gap: 12px; font-family: inherit; color: inherit;
     }
-    .pregunta-icono {
-      font-size: 1.1rem;
-      flex-shrink: 0;
-      color: var(--rojo);
-      margin-top: 2px;
-    }
+    .pregunta-icono { font-size: 1.1rem; flex-shrink: 0; color: var(--rojo); margin-top: 2px; }
     .pregunta-texto {
-      font-weight: 600;
-      font-size: 1rem;
-      color: var(--texto);
-      flex: 1;
-      line-height: 1.45;
-      letter-spacing: -0.1px;
+      font-weight: 600; font-size: 1rem; color: var(--texto); flex: 1;
+      line-height: 1.45; letter-spacing: -0.1px;
     }
-    .pregunta-meta {
-      font-size: 0.7rem;
-      color: var(--texto-suave);
-      margin: 10px 0 8px 28px;
-      letter-spacing: 0.2px;
-    }
-    .pregunta-meta .sector {
-      color: var(--dorado);
-      font-weight: 500;
-      opacity: 0.9;
-    }
+    .pregunta-meta { font-size: 0.7rem; color: var(--texto-suave); margin: 10px 0 8px 28px; letter-spacing: 0.2px; }
+    .pregunta-meta .sector { color: var(--dorado); font-weight: 500; opacity: 0.9; }
     .btn-ver-respuesta {
-      background: transparent;
-      border: 1px solid var(--rojo);
-      color: var(--rojo);
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 0.75rem;
-      cursor: pointer;
-      margin: 6px 0 0 28px;
-      padding: 6px 14px;
-      border-radius: 30px;
-      transition: all 0.2s ease;
-      letter-spacing: 0.2px;
+      background: transparent; border: 1px solid var(--rojo); color: var(--rojo);
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.75rem;
+      cursor: pointer; margin: 6px 0 0 28px; padding: 6px 14px; border-radius: 30px;
+      transition: all 0.2s ease; letter-spacing: 0.2px;
     }
-    .btn-ver-respuesta:hover {
-      background: var(--rojo);
-      color: white;
-    }
+    .btn-ver-respuesta:hover { background: var(--rojo); color: white; }
     .respuesta-container {
-      display: block;
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease-out, opacity 0.3s ease, margin-top 0.3s;
-      margin-top: 0;
+      display: block; max-height: 0; opacity: 0; overflow: hidden;
+      transition: max-height 0.4s ease-out, opacity 0.3s ease, margin-top 0.3s; margin-top: 0;
     }
-    .respuesta-container.visible {
-      max-height: 400px;
-      opacity: 1;
-      overflow-y: auto;
-      margin-top: 14px;
-    }
+    .respuesta-container.visible { max-height: 400px; opacity: 1; overflow-y: auto; margin-top: 14px; }
     .respuesta-container.visible::-webkit-scrollbar { width: 4px; }
-    .respuesta-container.visible::-webkit-scrollbar-track { background: transparent; }
     .respuesta-container.visible::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
     .respuesta {
-      background: var(--negro-suave);
-      padding: 1.2rem 1.2rem 1rem;
-      border-radius: 12px;
-      border-left: 3px solid var(--dorado);
-      position: relative;
+      background: var(--negro-suave); padding: 1.2rem 1.2rem 1rem;
+      border-radius: 12px; border-left: 3px solid var(--dorado); position: relative;
     }
     .cerrar-respuesta {
-      position: sticky;
-      top: 0;
-      float: right;
-      background: var(--tarjeta);
-      border: 1px solid var(--borde);
-      font-size: 1rem;
-      cursor: pointer;
-      color: var(--texto-tenue);
-      margin-left: 12px;
-      margin-bottom: 6px;
-      padding: 0;
-      border-radius: 50%;
-      width: 26px;
-      height: 26px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1;
-      transition: all 0.2s;
+      position: sticky; top: 0; float: right; background: var(--tarjeta); border: 1px solid var(--borde);
+      font-size: 1rem; cursor: pointer; color: var(--texto-tenue); margin-left: 12px;
+      margin-bottom: 6px; padding: 0; border-radius: 50%; width: 26px; height: 26px;
+      display: inline-flex; align-items: center; justify-content: center; z-index: 1; transition: all 0.2s;
     }
-    .cerrar-respuesta:hover {
-      background: var(--rojo);
-      color: white;
-      border-color: var(--rojo);
-    }
-    .respuesta-texto {
-      clear: both;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: var(--texto);
-    }
-    .respuesta-autor {
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-top: 12px;
-      color: var(--dorado);
-      text-align: right;
-      letter-spacing: 0.3px;
-    }
+    .cerrar-respuesta:hover { background: var(--rojo); color: white; border-color: var(--rojo); }
+    .respuesta-texto { clear: both; font-size: 0.9rem; line-height: 1.6; color: var(--texto); }
+    .respuesta-autor { font-size: 0.75rem; font-weight: 600; margin-top: 12px; color: var(--dorado); text-align: right; letter-spacing: 0.3px; }
+    .loading { text-align: center; padding: 40px; color: var(--texto-suave); font-size: 0.9rem; }
 
-    .loading {
-      text-align: center;
-      padding: 40px;
-      color: var(--texto-suave);
-      font-size: 0.9rem;
-    }
-
-    /* ---------- FOOTNOTE (contactos) ---------- */
-    .footnote {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--borde);
-      text-align: center;
-    }
-    .footnote h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--texto);
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.3px;
-    }
-    .footnote p {
-      font-size: 0.85rem;
-      color: var(--texto-tenue);
-      margin-bottom: 1.5rem;
-    }
-    .contactos {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .sector-bloque {
-      text-align: left;
-    }
+    .footnote { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--borde); text-align: center; }
+    .footnote h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--texto); margin-bottom: 0.5rem; letter-spacing: 0.3px; }
+    .footnote p { font-size: 0.85rem; color: var(--texto-tenue); margin-bottom: 1.5rem; }
+    .contactos { display: flex; flex-direction: column; gap: 2rem; text-align: left; }
+    .sector-bloque { text-align: left; }
     .sector-titulo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--dorado);
-      margin-bottom: 0.8rem;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      opacity: 0.9;
+      font-family: 'Playfair Display', serif; font-weight: 700; color: var(--dorado);
+      margin-bottom: 0.8rem; letter-spacing: 0.5px; text-transform: uppercase;
+      font-size: 0.8rem; opacity: 0.9;
     }
-    .puesto-grupo {
-      margin-bottom: 1rem;
-    }
+    .puesto-grupo { margin-bottom: 1rem; }
     .puesto-subtitulo {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--texto-suave);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 0.5rem;
+      font-size: 0.7rem; font-weight: 600; color: var(--texto-suave);
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;
     }
-    .contacto-botones {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .contacto-botones { display: flex; flex-wrap: wrap; gap: 8px; }
     .btn-contacto {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--tarjeta);
-      border: 1px solid var(--borde);
-      color: var(--texto);
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 30px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      transition: all 0.2s;
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--tarjeta); border: 1px solid var(--borde); color: var(--texto);
+      text-decoration: none; padding: 8px 14px; border-radius: 30px;
+      font-size: 0.8rem; font-weight: 500; transition: all 0.2s;
     }
-    .btn-contacto:hover {
-      border-color: #25D366;
-      background: rgba(37, 211, 102, 0.08);
-    }
+    .btn-contacto:hover { border-color: #25D366; background: rgba(37, 211, 102, 0.08); }
     .btn-contacto img { width: 16px; height: 16px; }
     .instagram-inline {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--texto-tenue);
-      text-decoration: none;
-      font-size: 0.8rem;
-      transition: color 0.2s;
-      margin-top: 1rem;
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--texto-tenue); text-decoration: none; font-size: 0.8rem;
+      transition: color 0.2s; margin-top: 1rem;
     }
     .instagram-inline:hover { color: #E1306C; }
     .instagram-inline img { width: 18px; height: 18px; opacity: 0.7; }
     .instagram-inline:hover img { opacity: 1; }
 
-    /* ---------- FOOTER ---------- */
     .footer {
-      max-width: 720px;
-      margin: 3rem auto 0;
-      padding: 1.5rem 1.2rem 1rem;
-      text-align: center;
-      font-size: 0.7rem;
-      color: var(--texto-suave);
-      border-top: 1px solid var(--borde);
-      letter-spacing: 0.3px;
+      max-width: 720px; margin: 3rem auto 0; padding: 1.5rem 1.2rem 1rem;
+      text-align: center; font-size: 0.7rem; color: var(--texto-suave);
+      border-top: 1px solid var(--borde); letter-spacing: 0.3px;
     }
     .footer strong { color: var(--rojo); font-weight: 600; }
 
-    /* ---------- MODAL WHATSAPP ---------- */
-    .modal-wa-overlay {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.7);
-      backdrop-filter: blur(8px);
-      display: flex; align-items: center; justify-content: center;
-      z-index: 3000;
-      visibility: hidden; opacity: 0;
-      transition: visibility 0.2s, opacity 0.2s;
-      padding: 20px;
-    }
-    .modal-wa-overlay.active { visibility: visible; opacity: 1; }
-    .modal-wa-card {
-      background: var(--tarjeta);
-      border: 1px solid var(--borde);
-      width: 100%; max-width: 420px;
-      border-radius: 20px;
-      padding: 2rem 1.5rem 1.5rem;
-      position: relative;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-      text-align: center;
-    }
-    .modal-wa-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem; font-weight: 700;
-      margin-bottom: 0.5rem; color: var(--texto);
-    }
-    .modal-wa-card p { font-size: 0.85rem; color: var(--texto-tenue); margin-bottom: 1.5rem; }
-    .wa-opciones { display: flex; flex-direction: column; gap: 10px; max-height: 400px; overflow-y: auto; }
-    .wa-boton {
-      background: var(--negro-suave);
-      color: var(--texto);
-      border: 1px solid var(--borde);
-      padding: 12px 16px;
-      border-radius: 12px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: flex; align-items: center; justify-content: center;
-      gap: 8px; text-decoration: none;
-    }
-    .wa-boton:hover {
-      border-color: #25D366;
-      background: rgba(37, 211, 102, 0.06);
-      transform: translateY(-1px);
-    }
-    .wa-boton img { width: 18px; height: 18px; }
-    .cerrar-wa {
-      position: absolute; top: 12px; right: 16px;
-      font-size: 1.5rem; cursor: pointer; color: var(--texto-suave);
-      transition: color 0.2s;
-    }
-    .cerrar-wa:hover { color: var(--rojo); }
-
-    /* ---------- ASISTENTE MODAL ---------- */
     .asistente-overlay {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.8);
-      backdrop-filter: blur(10px);
+      background-color: rgba(0,0,0,0.8); backdrop-filter: blur(10px);
       display: flex; align-items: center; justify-content: center;
-      z-index: 2000;
-      visibility: hidden; opacity: 0;
-      transition: visibility 0.2s, opacity 0.2s;
-      padding: 20px;
+      z-index: 2000; visibility: hidden; opacity: 0;
+      transition: visibility 0.2s, opacity 0.2s; padding: 20px;
     }
     .asistente-overlay.active { visibility: visible; opacity: 1; }
     .asistente-card {
-      background: var(--tarjeta);
-      border: 1px solid var(--borde);
-      width: 100%; max-width: 480px;
-      border-radius: 20px;
-      padding: 2rem 1.5rem 1.5rem;
-      position: relative;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-      box-sizing: border-box;
-      max-height: 90vh;
-      overflow-y: auto;
+      background: var(--tarjeta); border: 1px solid var(--borde);
+      width: 100%; max-width: 480px; border-radius: 20px;
+      padding: 2rem 1.5rem 1.5rem; position: relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5); box-sizing: border-box;
+      max-height: 90vh; overflow-y: auto;
     }
-    .asistente-card select,
-    .asistente-card textarea,
-    .asistente-card input {
+    .asistente-card select, .asistente-card textarea, .asistente-card input {
       width: 100%; max-width: 100%; box-sizing: border-box;
-      padding: 12px 14px;
-      border-radius: 10px;
-      border: 1.5px solid var(--borde);
-      background: var(--negro-suave);
-      color: var(--texto);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
-      margin: 8px 0 16px;
-      outline: none;
-      transition: border-color 0.2s;
+      padding: 12px 14px; border-radius: 10px; border: 1.5px solid var(--borde);
+      background: var(--negro-suave); color: var(--texto);
+      font-family: 'Inter', sans-serif; font-size: 0.9rem;
+      margin: 8px 0 16px; outline: none; transition: border-color 0.2s;
     }
-    .asistente-card select:focus,
-    .asistente-card textarea:focus,
-    .asistente-card input:focus {
-      border-color: var(--rojo);
-    }
+    .asistente-card select:focus, .asistente-card textarea:focus, .asistente-card input:focus { border-color: var(--rojo); }
     .asistente-card textarea { min-height: 90px; resize: vertical; }
-    .close-asistente {
-      position: absolute; top: 14px; right: 18px;
-      font-size: 1.6rem; cursor: pointer; color: var(--texto-suave);
-      transition: color 0.2s;
-    }
+    .close-asistente { position: absolute; top: 14px; right: 18px; font-size: 1.6rem; cursor: pointer; color: var(--texto-suave); transition: color 0.2s; }
     .close-asistente:hover { color: var(--rojo); }
     .paso { display: none; animation: fadeIn 0.3s ease; }
     .paso.activo { display: block; }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
     .paso h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem; font-weight: 700;
-      margin-bottom: 1.2rem; color: var(--texto);
-      letter-spacing: -0.1px;
+      font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700;
+      margin-bottom: 1.2rem; color: var(--texto); letter-spacing: -0.1px;
     }
     .grupo-botones { display: flex; flex-direction: column; gap: 10px; margin: 1.2rem 0 1rem; }
     .boton-opcion {
-      background: var(--negro-suave);
-      border: 1px solid var(--borde);
-      color: var(--texto);
-      padding: 12px 16px;
-      border-radius: 10px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 0.9rem;
-      cursor: pointer;
-      width: 100%;
-      transition: all 0.2s;
-      text-align: left;
+      background: var(--negro-suave); border: 1px solid var(--borde); color: var(--texto);
+      padding: 12px 16px; border-radius: 10px; font-family: 'Inter', sans-serif;
+      font-weight: 500; font-size: 0.9rem; cursor: pointer; width: 100%;
+      transition: all 0.2s; text-align: left;
     }
-    .boton-opcion:hover {
-      border-color: var(--rojo);
-      background: rgba(211, 18, 36, 0.06);
-    }
-    .boton-opcion.principal {
-      background: var(--rojo);
-      color: white;
-      border-color: var(--rojo);
-    }
-    .boton-opcion.principal:hover {
-      background: #E0152A;
-    }
+    .boton-opcion:hover { border-color: var(--rojo); background: rgba(211, 18, 36, 0.06); }
+    .boton-opcion.principal { background: var(--rojo); color: white; border-color: var(--rojo); }
+    .boton-opcion.principal:hover { background: #E0152A; }
     .boton-opcion.volver {
-      background: transparent;
-      border: 1px solid var(--borde);
-      color: var(--texto-tenue);
-      font-size: 0.8rem;
-      padding: 8px 12px;
-      width: auto;
-      align-self: flex-start;
+      background: transparent; border: 1px solid var(--borde); color: var(--texto-tenue);
+      font-size: 0.8rem; padding: 8px 12px; width: auto; align-self: flex-start;
     }
-    .boton-opcion.volver:hover {
-      color: var(--texto);
-      border-color: var(--texto-suave);
-      background: transparent;
-    }
+    .boton-opcion.volver:hover { color: var(--texto); border-color: var(--texto-suave); background: transparent; }
     .btn-siguiente {
-      background: var(--rojo);
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 10px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 0.9rem;
-      width: 100%;
-      margin-top: 0.5rem;
-      cursor: pointer;
-      transition: all 0.2s;
-      letter-spacing: 0.2px;
+      background: var(--rojo); color: white; border: none; padding: 12px;
+      border-radius: 10px; font-family: 'Inter', sans-serif; font-weight: 700;
+      font-size: 0.9rem; width: 100%; margin-top: 0.5rem;
+      cursor: pointer; transition: all 0.2s; letter-spacing: 0.2px;
     }
-    .btn-siguiente:hover {
-      background: #E0152A;
-      transform: translateY(-1px);
-    }
+    .btn-siguiente:hover { background: #E0152A; transform: translateY(-1px); }
     .error-text { color: var(--rojo); font-size: 0.75rem; margin-top: -10px; margin-bottom: 10px; }
-    .nav-paso {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1rem;
-      gap: 12px;
-    }
+    .nav-paso { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; gap: 12px; }
     .nav-paso .btn-siguiente { flex: 1; margin-top: 0; }
 
-    /* ---------- RESPONSIVE ---------- */
     @media (max-width: 480px) {
       .titulo-wrapper { flex-direction: column; padding: 0; }
       .emoji-lateral { position: absolute; right: 13px; top: 50%; transform: translateY(-50%); font-size: 1.6rem; }
@@ -605,13 +256,11 @@
       .pregunta-texto { font-size: 0.95rem; }
       .muro h2 { font-size: 1.4rem; }
       .asistente-card { padding: 1.5rem 1.2rem 1.2rem; }
-      .modal-wa-card { padding: 1.5rem 1.2rem 1.2rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
   <div class="header">
     <img src="https://i.postimg.cc/zvxt3PN8/LOGO-FPT.png" class="logo" alt="FPT">
     <div class="titulo-wrapper">
@@ -624,7 +273,6 @@
     <div class="slogan">Llevamos tu voz</div>
   </div>
 
-  <!-- CONTENIDO -->
   <div class="container">
     <button class="btn-abrir-asistente" id="abrirAsistente">➕ Hacé tu pregunta</button>
 
@@ -633,7 +281,429 @@
       <div id="muroLista"><div class="loading">Cargando preguntas...</div></div>
     </div>
 
-    <!-- FOOTNOTE: contactos -->
     <div class="footnote">
       <h3>¿Preferís comunicarte directamente con nosotros?</h3>
-      <p>Elegí a quién querés escribir
+      <p>Elegí a quién querés escribirle y te atendemos por WhatsApp.</p>
+      <div id="contactosContainer" class="contactos">
+        <div class="loading">Cargando contactos...</div>
+      </div>
+      <a href="https://www.instagram.com/fiunaparatodos" class="instagram-inline" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+        Seguinos en Instagram
+      </a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Hecho con <strong>❤</strong> por FPT · Fiuna Para Todos</p>
+    <p style="margin-top:0.3rem; opacity:0.6;">© 2026 · Elecciones de Representantes</p>
+  </footer>
+
+  <div id="asistenteModal" class="asistente-overlay">
+    <div class="asistente-card">
+      <span class="close-asistente" id="closeAsistente">&times;</span>
+
+      <div id="paso1" class="paso activo">
+        <h3>📌 ¿Tu pregunta va dirigida a un sector en especial?</h3>
+        <div class="grupo-botones">
+          <button class="boton-opcion" data-destino="general">A cualquier sector (general)</button>
+          <button class="boton-opcion principal" data-destino="especifico">A un sector específico</button>
+        </div>
+      </div>
+
+      <div id="paso2" class="paso">
+        <h3>🏛️ Elegí el sector:</h3>
+        <select id="sectorSelect">
+          <option value="Asamblea Universitaria">Asamblea Universitaria</option>
+          <option value="Consejo Superior Universitario">Consejo Superior Universitario</option>
+          <option value="Consejo Directivo">Consejo Directivo</option>
+          <option value="Tribunal Electoral Independiente">Tribunal Electoral Independiente</option>
+        </select>
+        <div class="nav-paso">
+          <button class="boton-opcion volver" data-volver="paso1">← Volver</button>
+          <button class="btn-siguiente" id="btnSiguienteSector">Continuar →</button>
+        </div>
+      </div>
+
+      <div id="paso3" class="paso">
+        <h3>👤 ¿A quién va dirigida tu pregunta?</h3>
+        <div id="destinatariosContainer" class="grupo-botones"></div>
+        <div class="nav-paso">
+          <button class="boton-opcion volver" data-volver="paso2">← Volver</button>
+        </div>
+      </div>
+
+      <div id="paso4" class="paso">
+        <h3>✏️ Escribí tu pregunta</h3>
+        <textarea id="preguntaTexto" placeholder="¿Qué te gustaría saber?"></textarea>
+        <div id="errorPregunta" class="error-text"></div>
+        <div class="nav-paso">
+          <button class="boton-opcion volver" data-volver="paso3">← Volver</button>
+          <button class="btn-siguiente" id="btnSiguientePregunta">Continuar →</button>
+        </div>
+      </div>
+
+      <div id="paso5" class="paso">
+        <h3>🤔 ¿Querés que tu pregunta sea anónima?</h3>
+        <div class="grupo-botones">
+          <button class="boton-opcion" data-anonimo="si">Sí, manteneme en el anonimato</button>
+          <button class="boton-opcion principal" data-anonimo="no">No, quiero dejar mi nombre</button>
+        </div>
+        <div class="nav-paso">
+          <button class="boton-opcion volver" data-volver="paso4">← Volver</button>
+        </div>
+      </div>
+
+      <div id="paso5b" class="paso">
+        <h3>📝 ¿Cómo te llamas?</h3>
+        <input type="text" id="nombrePreguntador" placeholder="Tu nombre">
+        <div id="errorNombre" class="error-text"></div>
+        <div class="nav-paso">
+          <button class="boton-opcion volver" data-volver="paso5">← Volver</button>
+          <button class="btn-siguiente" id="btnSiguienteNombre">Continuar →</button>
+        </div>
+      </div>
+
+      <div id="paso6" class="paso">
+        <h3>📞 ¿Te gustaría que te contactemos cuando respondamos?</h3>
+        <div class="grupo-botones">
+          <button class="boton-opcion" data-contacto="no">No, solo quiero dejar la pregunta</button>
+          <button class="boton-opcion principal" data-contacto="si">Sí, quiero que me contacten</button>
+        </div>
+        <div class="nav-paso">
+          <button class="boton-opcion volver" data-volver="paso5b">← Volver</button>
+        </div>
+      </div>
+
+      <div id="paso7" class="paso">
+        <h3>📱 Dejanos tu número de teléfono</h3>
+        <input type="tel" id="telefonoContacto" placeholder="Número con código de área">
+        <div id="errorTelefono" class="error-text"></div>
+        <div class="nav-paso">
+          <button class="boton-opcion volver" data-volver="paso6">← Volver</button>
+          <button class="btn-siguiente" id="btnEnviarPregunta">Enviar pregunta</button>
+        </div>
+      </div>
+
+      <div id="mensajeAsistente" style="margin-top: 16px; text-align: center;"></div>
+    </div>
+  </div>
+    <!-- SCRIPT -->
+  <script>
+    // ========== CONFIGURACIÓN ==========
+    // 👇 ACÁ VA EL LINK DEL SCRIPT
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzIuYDBkJIMEKJRstaeeDTtb8iQpxgcl1HmtoBISAwPkxnwyAr_LPPETGaxbi6de5iU/exec";
+
+    let telefonosGlobal = [];
+    let candidatosGlobal = {};
+
+    // ========== UTILIDADES ==========
+    function formatText(text) {
+      if (!text) return "";
+      text = text.replace(/\. /g, '.<br><br>');
+      text = text.replace(/  /g, '<br><br>');
+      text = text.replace(/\n/g, '<br>');
+      return text;
+    }
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/[&<>]/g, function(m) {
+        if (m === '&') return '&amp;';
+        if (m === '<') return '&lt;';
+        if (m === '>') return '&gt;';
+        return m;
+      });
+    }
+
+    // ========== CARGA DE DATOS ==========
+    async function cargarDatos() {
+      try {
+        const res = await fetch(SCRIPT_URL);
+        const data = await res.json();
+        telefonosGlobal = data.telefonos || [];
+        candidatosGlobal = data.candidatos || {};
+        return data;
+      } catch(e) {
+        console.error("Error cargando datos:", e);
+        return { preguntas: [], telefonos: [], candidatos: {} };
+      }
+    }
+
+    // ========== MURO DE PREGUNTAS ==========
+    async function cargarMuro() {
+      const container = document.getElementById('muroLista');
+      container.innerHTML = '<div class="loading">Cargando preguntas...</div>';
+      const data = await cargarDatos();
+      const preguntas = data.preguntas || [];
+      if (!preguntas.length) {
+        container.innerHTML = '<p style="text-align:center; padding:32px; color:var(--texto-suave);">✨ Todavía no hay preguntas respondidas. ¡Sé el primero en preguntar!</p>';
+        return;
+      }
+      let html = '';
+      preguntas.forEach((p, idx) => {
+        const preguntaFormateada = formatText(escapeHtml(p.pregunta));
+        const respuestaFormateada = formatText(escapeHtml(p.respuesta));
+        html += `
+          <div class="pregunta-item" id="pregunta-${idx}">
+            <button class="pregunta-boton" onclick="toggleRespuesta(${idx})">
+              <span class="pregunta-icono">❓</span>
+              <div class="pregunta-texto">${preguntaFormateada}</div>
+            </button>
+            <div class="pregunta-meta">
+              ${p.destinatario ? `<span class="sector">${escapeHtml(p.destinatario)}</span> · ` : ''}
+              ${p.nombrePregunto ? `Pregunta de: ${escapeHtml(p.nombrePregunto)} · ` : ''}
+              ${p.fecha ? new Date(p.fecha).toLocaleDateString() : ''}
+            </div>
+            <button class="btn-ver-respuesta" id="btnVer-${idx}" onclick="toggleRespuesta(${idx})">📖 Ver respuesta</button>
+            <div id="respuesta-${idx}" class="respuesta-container">
+              <div class="respuesta">
+                <button class="cerrar-respuesta" onclick="cerrarRespuesta(${idx})">✕</button>
+                <div class="respuesta-texto">💬 ${respuestaFormateada}</div>
+                <div class="respuesta-autor">— ${escapeHtml(p.respondio)}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+      container.innerHTML = html;
+    }
+
+    function toggleRespuesta(idx, forceClose = false) {
+      const respuestaDiv = document.getElementById(`respuesta-${idx}`);
+      const btnVer = document.getElementById(`btnVer-${idx}`);
+      if (!respuestaDiv) return;
+      const isVisible = respuestaDiv.classList.contains('visible');
+      if (forceClose) {
+        respuestaDiv.classList.remove('visible');
+        if (btnVer) btnVer.style.display = 'inline-block';
+        return;
+      }
+      if (isVisible) {
+        respuestaDiv.classList.remove('visible');
+        if (btnVer) btnVer.style.display = 'inline-block';
+      } else {
+        respuestaDiv.classList.add('visible');
+        if (btnVer) btnVer.style.display = 'none';
+      }
+    }
+    function cerrarRespuesta(idx) { toggleRespuesta(idx, true); }
+
+    // ========== CONTACTOS (footnote) ==========
+    function renderContactos() {
+      const container = document.getElementById('contactosContainer');
+      if (!container) return;
+      if (!telefonosGlobal.length) {
+        container.innerHTML = '<p style="color:var(--texto-suave);">No hay contactos disponibles.</p>';
+        return;
+      }
+
+      const orden = [
+        { sector: "Asamblea Universitaria", puesto: "Titular" },
+        { sector: "Asamblea Universitaria", puesto: "Suplente" },
+        { sector: "Consejo Superior Universitario", puesto: "Titular" },
+        { sector: "Consejo Superior Universitario", puesto: "Suplente" },
+        { sector: "Consejo Directivo", puesto: "Titular" },
+        { sector: "Consejo Directivo", puesto: "Titular" },
+        { sector: "Consejo Directivo", puesto: "Titular" },
+        { sector: "Consejo Directivo", puesto: "Suplente" },
+        { sector: "Consejo Directivo", puesto: "Suplente" },
+        { sector: "Consejo Directivo", puesto: "Suplente" },
+        { sector: "Tribunal Electoral Independiente", puesto: "Titular" },
+        { sector: "Tribunal Electoral Independiente", puesto: "Suplente" }
+      ];
+
+      const agrupado = {};
+      telefonosGlobal.forEach((t, i) => {
+        const ref = orden[i] || { sector: "Otros", puesto: "" };
+        if (!agrupado[ref.sector]) agrupado[ref.sector] = {};
+        if (!agrupado[ref.sector][ref.puesto]) agrupado[ref.sector][ref.puesto] = [];
+        agrupado[ref.sector][ref.puesto].push(t);
+      });
+
+      let html = '';
+      Object.keys(agrupado).forEach(sector => {
+        html += `<div class="sector-bloque"><div class="sector-titulo">${escapeHtml(sector)}</div>`;
+        Object.keys(agrupado[sector]).forEach(puesto => {
+          if (puesto) html += `<div class="puesto-grupo"><div class="puesto-subtitulo">${escapeHtml(puesto)}</div>`;
+          html += `<div class="contacto-botones">`;
+          agrupado[sector][puesto].forEach(t => {
+            const url = `https://wa.me/${t.numero}?text=${encodeURIComponent(t.mensaje || '')}`;
+            html += `
+              <a href="${url}" target="_blank" class="btn-contacto">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WA">
+                ${escapeHtml(t.nombre)}
+              </a>
+            `;
+          });
+          html += `</div>`;
+          if (puesto) html += `</div>`;
+        });
+        html += `</div>`;
+      });
+      container.innerHTML = html;
+    }
+
+    // ========== ASISTENTE ==========
+    const modal = document.getElementById('asistenteModal');
+    const abrirBtn = document.getElementById('abrirAsistente');
+    const cerrarBtn = document.getElementById('closeAsistente');
+
+    let datosPregunta = {
+      tipoDestino: null, sector: '', destinatario: '', textoPregunta: '',
+      anonimo: null, nombre: '', contacto: null, telefono: ''
+    };
+
+    function mostrarPaso(pasoId) {
+      const pasos = ['paso1','paso2','paso3','paso4','paso5','paso5b','paso6','paso7'];
+      pasos.forEach(id => document.getElementById(id).classList.remove('activo'));
+      document.getElementById(pasoId).classList.add('activo');
+    }
+
+    function reiniciarAsistente() {
+      datosPregunta = { tipoDestino: null, sector: '', destinatario: '', textoPregunta: '', anonimo: null, nombre: '', contacto: null, telefono: '' };
+      document.getElementById('sectorSelect').value = "Asamblea Universitaria";
+      document.getElementById('preguntaTexto').value = "";
+      document.getElementById('nombrePreguntador').value = "";
+      document.getElementById('telefonoContacto').value = "";
+      ['errorPregunta','errorNombre','errorTelefono'].forEach(id => document.getElementById(id).innerText = '');
+      document.getElementById('mensajeAsistente').innerHTML = "";
+      mostrarPaso('paso1');
+    }
+
+    // Paso 1: general o específico
+    document.querySelectorAll('#paso1 .boton-opcion').forEach(btn => {
+      btn.addEventListener('click', () => {
+        datosPregunta.tipoDestino = btn.getAttribute('data-destino');
+        if (datosPregunta.tipoDestino === 'general') {
+          datosPregunta.sector = 'General';
+          datosPregunta.destinatario = 'Cualquier representante';
+          mostrarPaso('paso4');
+        } else {
+          mostrarPaso('paso2');
+        }
+      });
+    });
+
+    // Paso 2: elegir sector
+    document.getElementById('btnSiguienteSector').addEventListener('click', () => {
+      datosPregunta.sector = document.getElementById('sectorSelect').value;
+      renderDestinatarios();
+      mostrarPaso('paso3');
+    });
+
+    // Paso 3: elegir destinatario
+    function renderDestinatarios() {
+      const cont = document.getElementById('destinatariosContainer');
+      const sector = datosPregunta.sector;
+      const candidatos = candidatosGlobal[sector] || [];
+      let html = `<button class="boton-opcion principal" data-dest="Cualquiera">Cualquiera del sector</button>`;
+      candidatos.forEach(c => {
+        html += `<button class="boton-opcion" data-dest="${escapeHtml(c.nombre)}">${escapeHtml(c.nombre)}${c.puesto ? ` (${escapeHtml(c.puesto)})` : ''}</button>`;
+      });
+      cont.innerHTML = html;
+      cont.querySelectorAll('.boton-opcion').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const dest = btn.getAttribute('data-dest');
+          datosPregunta.destinatario = dest === 'Cualquiera' ? `Cualquiera de ${sector}` : `${sector}, ${dest}`;
+          mostrarPaso('paso4');
+        });
+      });
+    }
+
+    // Paso 4: escribir pregunta
+    document.getElementById('btnSiguientePregunta').addEventListener('click', () => {
+      const pregunta = document.getElementById('preguntaTexto').value.trim();
+      if (!pregunta) { document.getElementById('errorPregunta').innerText = 'Escribí tu pregunta.'; return; }
+      document.getElementById('errorPregunta').innerText = '';
+      datosPregunta.textoPregunta = pregunta;
+      mostrarPaso('paso5');
+    });
+
+    // Paso 5: anónima
+    document.querySelectorAll('#paso5 .boton-opcion').forEach(btn => {
+      btn.addEventListener('click', () => {
+        datosPregunta.anonimo = btn.getAttribute('data-anonimo');
+        if (datosPregunta.anonimo === 'si') {
+          datosPregunta.nombre = '';
+          mostrarPaso('paso6');
+        } else {
+          mostrarPaso('paso5b');
+        }
+      });
+    });
+
+    // Paso 5b: nombre
+    document.getElementById('btnSiguienteNombre').addEventListener('click', () => {
+      const nombre = document.getElementById('nombrePreguntador').value.trim();
+      if (!nombre) { document.getElementById('errorNombre').innerText = 'Ingresá tu nombre.'; return; }
+      document.getElementById('errorNombre').innerText = '';
+      datosPregunta.nombre = nombre;
+      mostrarPaso('paso6');
+    });
+
+    // Paso 6: contacto
+    document.querySelectorAll('#paso6 .boton-opcion').forEach(btn => {
+      btn.addEventListener('click', () => {
+        datosPregunta.contacto = btn.getAttribute('data-contacto');
+        if (datosPregunta.contacto === 'si') mostrarPaso('paso7');
+        else enviarPregunta();
+      });
+    });
+
+    // Paso 7: teléfono
+    document.getElementById('btnEnviarPregunta').addEventListener('click', () => {
+      const telefono = document.getElementById('telefonoContacto').value.trim();
+      if (!telefono) { document.getElementById('errorTelefono').innerText = 'Ingresá tu teléfono.'; return; }
+      document.getElementById('errorTelefono').innerText = '';
+      datosPregunta.telefono = telefono;
+      enviarPregunta();
+    });
+
+    // Botones "Volver" en cada paso
+    document.querySelectorAll('.boton-opcion.volver').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const paso = btn.getAttribute('data-volver');
+        mostrarPaso(paso);
+      });
+    });
+
+    // Enviar pregunta
+    async function enviarPregunta() {
+      const payload = {
+        pregunta: datosPregunta.textoPregunta,
+        destinatario: datosPregunta.destinatario,
+        nombre: datosPregunta.anonimo === 'si' ? '' : datosPregunta.nombre,
+        telefono: datosPregunta.contacto === 'si' ? datosPregunta.telefono : ''
+      };
+      const msgDiv = document.getElementById('mensajeAsistente');
+      msgDiv.innerHTML = '<p style="color:var(--rojo)">Enviando...</p>';
+      try {
+        const res = await fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(payload) });
+        const data = await res.json();
+        if (data.success) {
+          msgDiv.innerHTML = '<p style="color:#16A34A">✅ Pregunta enviada. Pronto la responderemos.</p>';
+          setTimeout(() => { modal.classList.remove('active'); reiniciarAsistente(); cargarMuro(); }, 2000);
+        } else {
+          msgDiv.innerHTML = '<p style="color:var(--rojo)">❌ Error al enviar.</p>';
+        }
+      } catch(e) {
+        msgDiv.innerHTML = '<p style="color:var(--rojo)">❌ Error de conexión.</p>';
+      }
+    }
+
+    abrirBtn.onclick = () => { reiniciarAsistente(); modal.classList.add('active'); };
+    cerrarBtn.onclick = () => { modal.classList.remove('active'); reiniciarAsistente(); };
+    modal.onclick = (e) => { if (e.target === modal) modal.classList.remove('active'); };
+
+    // Exponer funciones al HTML
+    window.toggleRespuesta = toggleRespuesta;
+    window.cerrarRespuesta = cerrarRespuesta;
+
+    // Inicializar
+    (async () => {
+      await cargarMuro();
+      renderContactos();
+    })();
+  </script>
+</body>
+</html>
